@@ -51,3 +51,11 @@ def current_user_data(db: Session = Depends(get_db), user_dict = Depends(auth_mi
     if not user:
         raise HTTPException(404, 'User not found')
     return user
+
+@router.post('/upload')
+def upload_song():
+    # song_id = str(uuid.uuid4())
+    # song_res = cloudinary.uploader.upload(song.file, resource_type='auto', folder=f'songs/{song_id}')
+    print('test Ankita')
+    # store data into db
+    return 'ok'
